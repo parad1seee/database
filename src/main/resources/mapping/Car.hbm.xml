@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+    <class name="Model.Car" table="car">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="mark" column="mark"/>
+        <property name="type" column="type"/>
+        <property name="registrationMark" column="registration_mark"/>
+        <property name="dateOfIssue" column="year_of_issue"/>
+        <property name="vin" column="vin"/>
+        <property name="cityOfRegistration" column="registration_city"/>
+    </class>
+</hibernate-mapping>

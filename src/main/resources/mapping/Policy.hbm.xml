@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+    <class name="Model.Policy" table="policy">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="policyNumber" column="policy_number"/>
+        <property name="beginDate" column="begin_date"/>
+        <property name="endDate" column="end_date"/>
+        <property name="policyName" column="policy_name"/>
+        <property name="signingDate" column="signing_date"/>
+
+        <many-to-one name="car" column="car_id"
+                     class="Model.Car"
+                     lazy="false"
+                     cascade="all"/>
+
+        <many-to-one name="insurer" column="insurer_id"
+                     class="Model.Insurer"
+                     lazy="false"
+                     cascade="all"/>
+
+        <many-to-one name="document" column="document_id"
+                     class="Model.Document"
+                     lazy="false"
+                     cascade="all"/>
+    </class>
+</hibernate-mapping>
