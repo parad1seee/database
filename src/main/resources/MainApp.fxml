@@ -75,10 +75,10 @@
                         <Label text="Номер" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                         <Label text="Серия" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Label text="Название документа" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label text="День рождения" GridPane.columnIndex="2" />
+                        <Label text="Дата рождения" GridPane.columnIndex="2" />
                         <Label text="Дата выдачи документа" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                         <Label text="Кем выдан" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <Label text="Год выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="10" />
                         <Label text="VIN-код" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                         <Label text="Номерной знак" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                         <Label text="Тип" GridPane.columnIndex="2" GridPane.rowIndex="7" />

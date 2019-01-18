@@ -65,7 +65,7 @@
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="День рождения" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="Дата рождения" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
@@ -77,7 +77,7 @@
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="11">
+            <Label text="Год выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
@@ -131,9 +131,10 @@
             <TextField fx:id="carTypeField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
             <TextField fx:id="carRegistrationNumberField" GridPane.columnIndex="3" GridPane.rowIndex="9" />
             <TextField fx:id="carVinField" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-            <DatePicker fx:id="carDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <TextField fx:id="carYearOfIssueField" GridPane.columnIndex="3" GridPane.rowIndex="11" />
             <TextField fx:id="carCityOfRegistrationField" GridPane.columnIndex="3" GridPane.rowIndex="12" />
             <DatePicker fx:id="policySigningDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+            <DatePicker fx:id="carDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="14" />
             <Label text="Отчество" GridPane.rowIndex="6" />
             <Label text="Имя" GridPane.rowIndex="5" />
             <Label text="Конец действия полиса" GridPane.rowIndex="2" />
