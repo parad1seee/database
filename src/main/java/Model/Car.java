@@ -12,13 +12,13 @@ public class Car {
 
     private String registrationMark;
 
-    private long vin;
+    private String vin;
 
     private LocalDate dateOfIssue;
 
     private String cityOfRegistration;
 
-    public Car(String mark, String type, String registrationMark, long vin, LocalDate dateOfIssue, String cityOfRegistration) {
+    public Car(String mark, String type, String registrationMark, String vin, LocalDate dateOfIssue, String cityOfRegistration) {
         this.mark = mark;
         this.type = type;
         this.registrationMark = registrationMark;
@@ -28,7 +28,7 @@ public class Car {
     }
 
     public Car() {
-        this(null,null,null,0,null, null);
+        this(null,null,null,null,null, null);
     }
 
     public int getId() {
@@ -63,11 +63,11 @@ public class Car {
         this.registrationMark = registrationMark;
     }
 
-    public long getVin() {
+    public String getVin() {
         return vin;
     }
 
-    public void setVin(long vin) {
+    public void setVin(String vin) {
         this.vin = vin;
     }
 

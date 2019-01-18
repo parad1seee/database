@@ -121,17 +121,13 @@ public class PolicyEditController {
     public void setPolicy(Policy policy){
         this.policy = policy;
 
-        if(policy.getPolicyNumber() == 0)
+        if(policy.getInsurer().getPostIndex() == 0)
         {
-            policyNumberField.setText("");
             insurerPostIndexField.setText("");
-            carVinField.setText("");
         }
         else
         {
-            policyNumberField.setText(Integer.toString(policy.getPolicyNumber()));
             insurerPostIndexField.setText(Integer.toString(policy.getInsurer().getPostIndex()));
-            carVinField.setText(Long.toString(policy.getCar().getVin()));
         }
 
         policyStartDatePicker.setValue(policy.getBeginDate());
@@ -163,7 +159,7 @@ public class PolicyEditController {
     @FXML
     private void handleOk() {
         if (isInputValid()) {
-            policy.setPolicyNumber(Integer.parseInt(policyNumberField.getText()));
+            policy.setPolicyNumber(policyNumberField.getText());
             policy.setPolicyName(policyNameField.getText());
             policy.setBeginDate(policyStartDatePicker.getValue());
             policy.setEndDate(policyEndDatePicker.getValue());
@@ -186,7 +182,7 @@ public class PolicyEditController {
             policy.getCar().setMark(carMarkField.getText());
             policy.getCar().setType(carTypeField.getText());
             policy.getCar().setRegistrationMark(carRegistrationNumberField.getText());
-            policy.getCar().setVin(Long.parseLong(carVinField.getText()));
+            policy.getCar().setVin(carVinField.getText());
             policy.getCar().setDateOfIssue(carDateOfIssuePicker.getValue());
             policy.getCar().setCityOfRegistration(carCityOfRegistrationField.getText());
             policy.setSigningDate(policySigningDatePicker.getValue());
@@ -206,12 +202,6 @@ public class PolicyEditController {
 
                 if (policyNumberField.getText() == null || policyNumberField.getText().length() == 0) {
                     errorMessage += "Неверный номер полиса!\n";
-                } else {
-                    try {
-                        Integer.parseInt(policyNumberField.getText());
-                    } catch (NumberFormatException e) {
-                        errorMessage += "Номер полиса должен быть целым числом!\n";
-                    }
                 }
 
                 if (policyStartDatePicker.getValue() == null) {
@@ -318,12 +308,6 @@ public class PolicyEditController {
 
                 if (carVinField.getText() == null || carVinField.getText().length() == 0) {
                     errorMessage += "Неверный вин код!\n";
-                } else {
-                    try {
-                        Long.parseLong(carVinField.getText());
-                    } catch (NumberFormatException e) {
-                        errorMessage += "Вин код должен быть целым числом!\n";
-                    }
                 }
 
                 if (carDateOfIssuePicker.getValue() == null) {

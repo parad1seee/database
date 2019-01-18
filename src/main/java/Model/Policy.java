@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Policy {
     private int id;
 
-    private int policyNumber;
+    private String policyNumber;
 
     private LocalDate beginDate;
 
@@ -21,7 +21,7 @@ public class Policy {
 
     private LocalDate signingDate;
 
-    public Policy(int policyNumber, LocalDate beginDate, LocalDate endDate, String policyName, Insurer insurer, Document document, Car car, LocalDate signingDate) {
+    public Policy(String policyNumber, LocalDate beginDate, LocalDate endDate, String policyName, Insurer insurer, Document document, Car car, LocalDate signingDate) {
         this.policyNumber = policyNumber;
         this.beginDate = beginDate;
         this.endDate = endDate;
@@ -33,7 +33,7 @@ public class Policy {
     }
 
     public Policy() {
-        this.policyNumber = 0;
+        this.policyNumber = null;
         this.beginDate = null;
         this.endDate = null;
         this.policyName = "";
@@ -51,11 +51,11 @@ public class Policy {
         this.id = id;
     }
 
-    public int getPolicyNumber() {
+    public String getPolicyNumber() {
         return policyNumber;
     }
 
-    public void setPolicyNumber(int policyNumber) {
+    public void setPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
     }
 
