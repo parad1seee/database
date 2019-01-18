@@ -110,6 +110,12 @@ public class MainController {
     private Label insurerDistrictLabel;
 
     @FXML
+    private Label residenceHouseLabel;
+
+    @FXML
+    private Label residenceApartmentLabel;
+
+    @FXML
     private Button exitButton;
 
     @FXML
@@ -155,7 +161,7 @@ public class MainController {
 
     private void ShowDetails(Policy policy) {
         if (policy != null) {
-            policyNumberLabel.setText(Integer.toString(policy.getPolicyNumber()));
+            policyNumberLabel.setText(policy.getPolicyNumber());
             policyValidityLabel.setText(DateUtil.format(policy.getBeginDate()) + "-" + DateUtil.format(policy.getEndDate()));
             policyNameLabel.setText(policy.getPolicyName());
             insurerFIOLabel.setText(policy.getInsurer().getSurname() + " "
@@ -165,6 +171,8 @@ public class MainController {
             insurerDistrictLabel.setText(policy.getInsurer().getResidence().getDistrict());
             insurerCityLabel.setText(policy.getInsurer().getResidence().getCity());
             insurerStreetLabel.setText(policy.getInsurer().getResidence().getStreet());
+            residenceHouseLabel.setText(Integer.toString(policy.getInsurer().getResidence().getHouseNumber()));
+            residenceApartmentLabel.setText(Integer.toString(policy.getInsurer().getResidence().getApartmentNumber()));
             insurerPostIndexLabel.setText(Integer.toString(policy.getInsurer().getPostIndex()));
             insurerRegistrationCodeLabel.setText(policy.getInsurer().getIdentificationCode());
             insurerTelephoneLabel.setText(policy.getInsurer().getTelephone());
@@ -177,7 +185,7 @@ public class MainController {
             carMarkLabel.setText(policy.getCar().getMark());
             carTypeLabel.setText(policy.getCar().getType());
             carRegistrationMarkLabel.setText(policy.getCar().getRegistrationMark());
-            carVINLabel.setText(Long.toString(policy.getCar().getVin()));
+            carVINLabel.setText(policy.getCar().getVin());
             carDateOfIssueLabel.setText(DateUtil.format(policy.getCar().getDateOfIssue()));
             carCityOfRegistrationLabel.setText(policy.getCar().getCityOfRegistration());
             policySigningDateLabel.setText(DateUtil.format(policy.getSigningDate()));
@@ -191,6 +199,8 @@ public class MainController {
             insurerDistrictLabel.setText("");
             insurerCityLabel.setText("");
             insurerStreetLabel.setText("");
+            residenceApartmentLabel.setText("");
+            residenceHouseLabel.setText("");
             insurerPostIndexLabel.setText("");
             insurerRegistrationCodeLabel.setText("");
             insurerTelephoneLabel.setText("");

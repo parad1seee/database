@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="685.0" prefWidth="669.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="PolicyEditController">
+<AnchorPane prefHeight="685.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PolicyEditController">
    <children>
-      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="634.0" prefWidth="641.0">
+      <GridPane layoutX="14.0" prefHeight="634.0" prefWidth="641.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,10 +25,10 @@
             <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="40.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="74.0" minHeight="20.0" prefHeight="74.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="63.0" minHeight="20.0" prefHeight="29.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="40.0" minHeight="17.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.0" minHeight="20.0" prefHeight="24.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="82.0" minHeight="17.0" prefHeight="67.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
@@ -45,57 +45,63 @@
             <Label text="Область" GridPane.rowIndex="7" />
             <Label text="Номер полиса" />
             <Label text="Район" GridPane.rowIndex="8" />
-            <Label text="Телефон" GridPane.rowIndex="13" />
-            <Label text="ИНН" GridPane.rowIndex="12" />
-            <Label text="Почтовый индекс" GridPane.rowIndex="11" />
+            <Label text="Телефон" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="ИНН" GridPane.rowIndex="14" />
+            <Label text="Почтовый индекс" GridPane.rowIndex="13" />
             <Label text="Улица" GridPane.rowIndex="10" />
             <Label text="Город" GridPane.rowIndex="9" />
-            <Label text="Номер" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label text="Номер" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Серия" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="Серия" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Название документа" GridPane.columnIndex="2">
+            <Label text="Название документа" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="День рождения" GridPane.rowIndex="14" />
-            <Label text="Дата выдачи документа" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label text="День рождения" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Кем выдан" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label text="Дата выдачи документа" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="9">
+            <Label text="Кем выдан" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="VIN-код" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Номерной знак" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Label text="VIN-код" GridPane.columnIndex="2" GridPane.rowIndex="10">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Тип" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Label text="Номерной знак" GridPane.columnIndex="2" GridPane.rowIndex="9">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Марка машины" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Label text="Тип" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Дата подписания полиса" GridPane.columnIndex="2" GridPane.rowIndex="11">
+            <Label text="Марка машины" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Label text="Место регистрации ТС" GridPane.columnIndex="2" GridPane.rowIndex="10">
+            <Label text="Дата подписания полиса" GridPane.columnIndex="2" GridPane.rowIndex="13">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="Место регистрации ТС" GridPane.columnIndex="2" GridPane.rowIndex="12">
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
@@ -110,25 +116,29 @@
             <TextField fx:id="residenceDistrictField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <TextField fx:id="residenceCityField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <TextField fx:id="residenceStreetField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <TextField fx:id="insurerPostIndexField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-            <TextField fx:id="insurerIdentificationCodeField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-            <TextField fx:id="insurerTelephoneField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-            <DatePicker fx:id="insurerBirthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-            <TextField fx:id="documentNameField" GridPane.columnIndex="3" />
-            <TextField fx:id="documentSeriesField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField fx:id="documentNumberField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <DatePicker fx:id="documentDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <TextArea fx:id="documentIssuedByField" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <TextField fx:id="carMarkField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <TextField fx:id="carTypeField" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <TextField fx:id="carRegistrationNumberField" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <TextField fx:id="carVinField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <DatePicker fx:id="carDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-            <TextField fx:id="carCityOfRegistrationField" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-            <DatePicker fx:id="policySigningDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <TextField fx:id="residenceHouseField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField fx:id="residenceApartmentField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="insurerPostIndexField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField fx:id="insurerIdentificationCodeField" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField fx:id="insurerTelephoneField" GridPane.columnIndex="3" />
+            <DatePicker fx:id="insurerBirthDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="documentNameField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="documentSeriesField" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="documentNumberField" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <DatePicker fx:id="documentDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextArea fx:id="documentIssuedByField" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextField fx:id="carMarkField" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="carTypeField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="carRegistrationNumberField" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="carVinField" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <DatePicker fx:id="carDateOfIssuePicker" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <TextField fx:id="carCityOfRegistrationField" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+            <DatePicker fx:id="policySigningDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="13" />
             <Label text="Отчество" GridPane.rowIndex="6" />
             <Label text="Имя" GridPane.rowIndex="5" />
             <Label text="Конец действия полиса" GridPane.rowIndex="2" />
+            <Label text="Дом" GridPane.rowIndex="11" />
+            <Label text="Номер квартиры" GridPane.rowIndex="12" />
          </children>
       </GridPane>
       <ButtonBar layoutX="455.0" layoutY="646.0" prefHeight="40.0" prefWidth="200.0">

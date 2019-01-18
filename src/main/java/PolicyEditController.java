@@ -77,6 +77,12 @@ public class PolicyEditController {
     private TextField carMarkField;
 
     @FXML
+    private TextField residenceHouseField;
+
+    @FXML
+    private TextField residenceApartmentField;
+
+    @FXML
     private DatePicker documentDateOfIssuePicker;
 
     @FXML
@@ -124,9 +130,13 @@ public class PolicyEditController {
         if(policy.getInsurer().getPostIndex() == 0)
         {
             insurerPostIndexField.setText("");
+            residenceApartmentField.setText("");
+            residenceHouseField.setText("");
         }
         else
         {
+            residenceHouseField.setText(Integer.toString(policy.getInsurer().getResidence().getHouseNumber()));
+            residenceApartmentField.setText(Integer.toString(policy.getInsurer().getResidence().getApartmentNumber()));
             insurerPostIndexField.setText(Integer.toString(policy.getInsurer().getPostIndex()));
         }
 
@@ -140,6 +150,7 @@ public class PolicyEditController {
         residenceDistrictField.setText(policy.getInsurer().getResidence().getDistrict());
         residenceCityField.setText(policy.getInsurer().getResidence().getCity());
         residenceStreetField.setText(policy.getInsurer().getResidence().getStreet());
+
         insurerIdentificationCodeField.setText(policy.getInsurer().getIdentificationCode());
         insurerTelephoneField.setText(policy.getInsurer().getTelephone());
         insurerBirthDatePicker.setValue(policy.getInsurer().getBirthDate());
@@ -158,7 +169,6 @@ public class PolicyEditController {
 
     @FXML
     private void handleOk() {
-        if (isInputValid()) {
             policy.setPolicyNumber(policyNumberField.getText());
             policy.setPolicyName(policyNameField.getText());
             policy.setBeginDate(policyStartDatePicker.getValue());
@@ -170,6 +180,8 @@ public class PolicyEditController {
             policy.getInsurer().getResidence().setDistrict(residenceDistrictField.getText());
             policy.getInsurer().getResidence().setCity(residenceCityField.getText());
             policy.getInsurer().getResidence().setStreet(residenceStreetField.getText());
+            policy.getInsurer().getResidence().setHouseNumber(Integer.parseInt(residenceStreetField.getText()));
+            policy.getInsurer().getResidence().setApartmentNumber(Integer.parseInt(residenceApartmentField.getText()));
             policy.getInsurer().setPostIndex(Integer.parseInt(insurerPostIndexField.getText()));
             policy.getInsurer().setIdentificationCode(insurerIdentificationCodeField.getText());
             policy.getInsurer().setTelephone(insurerTelephoneField.getText());
@@ -189,7 +201,6 @@ public class PolicyEditController {
 
             okClicked = true;
             dialogStage.close();
-        }
     }
 
     @FXML
@@ -246,6 +257,26 @@ public class PolicyEditController {
 
                 if (residenceStreetField.getText() == null || residenceStreetField.getText().length() == 0) {
                     errorMessage += "Неверная улица!\n";
+                }
+
+                if (residenceApartmentField.getText() == null || residenceApartmentField.getText().length() == 0) {
+                    errorMessage += "Неверный номер квартиры!\n";
+                } else {
+                    try {
+                        Integer.parseInt(residenceApartmentField.getText());
+                    } catch (NumberFormatException e) {
+                        errorMessage += "Номер квартиры должен быть целым числом!\n";
+                    }
+                }
+
+                if (residenceHouseField.getText() == null || residenceHouseField.getText().length() == 0) {
+                    errorMessage += "Неверный номер дома!\n";
+                } else {
+                    try {
+                        Integer.parseInt(residenceHouseField.getText());
+                    } catch (NumberFormatException e) {
+                        errorMessage += "Номер дома должен быть целым числом!\n";
+                    }
                 }
 
                 if (insurerPostIndexField.getText() == null || insurerPostIndexField.getText().length() == 0) {

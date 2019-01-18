@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="600.0" prefWidth="982.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="MainController">
+<AnchorPane prefHeight="600.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <SplitPane dividerPositions="0.32551020408163267" layoutX="8.0" layoutY="14.0" pickOnBounds="false" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -45,14 +45,15 @@
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                       <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                       <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="80.0" minHeight="20.0" prefHeight="80.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="80.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="40.0" minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Срок действия полиса" GridPane.rowIndex="1" />
@@ -66,43 +67,47 @@
                         <Label text="Номер полиса" />
                         <Label fx:id="policyNumberLabel" text="Label" GridPane.columnIndex="1" />
                         <Label text="Район" GridPane.rowIndex="5" />
-                        <Label text="Телефон" GridPane.rowIndex="10" />
-                        <Label text="ИНН" GridPane.rowIndex="9" />
-                        <Label text="Почтовый индекс" GridPane.rowIndex="8" />
+                        <Label text="Телефон" GridPane.rowIndex="12" />
+                        <Label text="ИНН" GridPane.rowIndex="11" />
+                        <Label text="Почтовый индекс" GridPane.rowIndex="10" />
                         <Label text="Улица" GridPane.rowIndex="7" />
                         <Label text="Город" GridPane.rowIndex="6" />
-                        <Label text="Номер" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label text="Серия" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label text="Название документа" GridPane.columnIndex="2" />
-                        <Label text="День рождения" GridPane.rowIndex="11" />
-                        <Label text="Дата выдачи документа" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Label text="Кем выдан" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                        <Label text="VIN-код" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                        <Label text="Номерной знак" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                        <Label text="Тип" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                        <Label text="Марка машины" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Label text="Дата подписания полиса" GridPane.columnIndex="2" GridPane.rowIndex="11" />
-                        <Label text="Место регистрации ТС" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-                        <Label fx:id="policySigningDateLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="11" />
-                        <Label fx:id="carCityOfRegistrationLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-                        <Label fx:id="carDateOfIssueLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                        <Label fx:id="carVINLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-                        <Label fx:id="carRegistrationMarkLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                        <Label fx:id="carTypeLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                        <Label fx:id="carMarkLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Label fx:id="documentIssuedByLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <Label fx:id="documentDateOfIssueLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <Label fx:id="documentNumberLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Label fx:id="documentSeriesLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Label fx:id="documentNameLabel" text="Label" GridPane.columnIndex="3" />
-                        <Label fx:id="insurerBirthDayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                        <Label fx:id="insurerTelephoneLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                        <Label fx:id="insurerRegistrationCodeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <Label fx:id="insurerPostIndexLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label text="Номер" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="Серия" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="Название документа" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label text="День рождения" GridPane.columnIndex="2" />
+                        <Label text="Дата выдачи документа" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label text="Кем выдан" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label text="Дата выпуска ТС" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <Label text="VIN-код" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <Label text="Номерной знак" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <Label text="Тип" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <Label text="Марка машины" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label text="Дата подписания полиса" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                        <Label text="Место регистрации ТС" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                        <Label fx:id="policySigningDateLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+                        <Label fx:id="carCityOfRegistrationLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                        <Label fx:id="carDateOfIssueLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                        <Label fx:id="carVINLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                        <Label fx:id="carRegistrationMarkLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                        <Label fx:id="carTypeLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <Label fx:id="carMarkLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Label fx:id="documentIssuedByLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label fx:id="documentDateOfIssueLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label fx:id="documentNumberLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label fx:id="documentSeriesLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label fx:id="documentNameLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="insurerBirthDayLabel" text="Label" GridPane.columnIndex="3" />
+                        <Label fx:id="insurerTelephoneLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <Label fx:id="insurerRegistrationCodeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                        <Label fx:id="insurerPostIndexLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                         <Label fx:id="insurerStreetLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                         <Label fx:id="insurerCityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <Label fx:id="insurerDistrictLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="residenceHouseLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label text="Дом" GridPane.rowIndex="8" />
+                        <Label fx:id="residenceApartmentLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label text="Номер квартиры" GridPane.rowIndex="9" />
                      </children>
                   </GridPane>
                   <ButtonBar layoutX="-1.0" layoutY="544.0" prefHeight="40.0" prefWidth="658.0">
