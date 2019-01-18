@@ -138,7 +138,7 @@ public class PolicyEditController {
             residenceApartmentField.setText(Integer.toString(policy.getInsurer().getResidence().getApartmentNumber()));
             insurerPostIndexField.setText(Integer.toString(policy.getInsurer().getPostIndex()));
         }
-        policyNameField.setText(policy.getPolicyName());
+        policyNumberField.setText(policy.getPolicyNumber());
         policyStartDatePicker.setValue(policy.getBeginDate());
         policyEndDatePicker.setValue(policy.getEndDate());
         policyNameField.setText(policy.getPolicyName());

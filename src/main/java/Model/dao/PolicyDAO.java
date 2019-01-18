@@ -131,7 +131,6 @@ public class PolicyDAO implements DAO<Policy,Integer> {
                     + DateUtil.formatSecond(begin) + "' AND '"
                     + DateUtil.formatSecond(end) + "'");
             Query result = session.createQuery(query.toString());
-            System.out.println(query.toString());
             session.getTransaction().commit();
             return FXCollections.observableArrayList(result.getResultList());
         } catch (Exception e) {
