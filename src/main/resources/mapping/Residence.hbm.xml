@@ -13,5 +13,7 @@
         <property name="district" column="district"/>
         <property name="city" column="city"/>
         <property name="street" column="street"/>
+        <property name="houseNumber" column="house_number"/>
+        <property name="apartmentNumber" column="apartment_number"/>
     </class>
 </hibernate-mapping>

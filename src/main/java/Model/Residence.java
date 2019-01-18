@@ -12,15 +12,21 @@ public class Residence {
 
     private String street;
 
-    public Residence(String region, String district, String city, String street) {
+    private int houseNumber;
+
+    private int apartmentNumber;
+
+    public Residence(String region, String district, String city, String street, int houseNumber, int apartmentNumber) {
         this.region = region;
         this.district = district;
         this.city = city;
         this.street = street;
+        this.houseNumber = houseNumber;
+        this.apartmentNumber = apartmentNumber;
     }
 
     public Residence() {
-        this(null,null,null,null);
+        this(null,null,null,null, 0, 0);
     }
 
     public String getRegion() {
@@ -61,6 +67,22 @@ public class Residence {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getHouseNumber() {
+        return houseNumber;
+    }
+
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public int getApartmentNumber() {
+        return apartmentNumber;
+    }
+
+    public void setApartmentNumber(int apartmentNumber) {
+        this.apartmentNumber = apartmentNumber;
     }
 
     @Override
